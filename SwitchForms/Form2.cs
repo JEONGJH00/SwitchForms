@@ -51,7 +51,6 @@ namespace SwitchForms
             label1.Text = "당신의 더 좋은 수면";
             label2.Text = "Connection Time : ";
             label3.Text = "포트를 선택해주세요";
-            label5.Text = DateTime.Now.ToString("hh:mm:ss");
 
             // 불면증 자가진단 테스트의 텍스트
             label4.Text = "불면증 자가진단 테스트";
@@ -70,13 +69,13 @@ namespace SwitchForms
             //수면장애 자가진단 텍스트
             button5.Text = "확인";
             button6.Text = "수면장애 자가검진";
-            label6.Text = "오늘 당신의 수면은?";
-            label7.Text = "심박수 45이하, 움직임 5이하 = RAM수면으로 판단" + "\n" + "심박수 65이상, 움직임 10이상 = 비RAM수면으로 판단"
+            label5.Text = "오늘 당신의 수면은?";
+            label6.Text = "심박수 45이하, 움직임 5이하 = RAM수면으로 판단" + "\n" + "심박수 65이상, 움직임 10이상 = 비RAM수면으로 판단"
                 + "\n" + "* 심박수가 35이하로 떨어졌을 시 병원정밀검사 필요!";
-            label8.Text = "심박수 최대값 : ";
-            label9.Text = "심박수 최소값 : ";
-            label10.Text = "움직임 최대값 : ";
-            label11.Text = "움직임 최소값 : ";
+            label7.Text = "심박수 최대값 : ";
+            label8.Text = "심박수 최소값 : ";
+            label9.Text = "움직임 최대값 : ";
+            label10.Text = "움직임 최소값 : ";
         }
 
         private void ChartSetting()
@@ -394,10 +393,10 @@ namespace SwitchForms
 
         private void button5_Click(object sender, EventArgs e)
         {
-            label8.Text = string.Format("심박수 최대값 : " + HeartMax);
-            label9.Text = string.Format("심박수 최소값 : " + HeartMin);
-            label10.Text = string.Format("움직임 최대값 : " + PIRMax);
-            label11.Text = string.Format("움직임 최소값 : " + PIRMin);
+            label7.Text = string.Format("심박수 최대값 : " + HeartMax);
+            label8.Text = string.Format("심박수 최소값 : " + HeartMin);
+            label9.Text = string.Format("움직임 최대값 : " + PIRMax);
+            label10.Text = string.Format("움직임 최소값 : " + PIRMin);
         }
         private void button6_Click(object sender, EventArgs e)
         {
