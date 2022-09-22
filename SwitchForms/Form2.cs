@@ -176,7 +176,7 @@ namespace SwitchForms
                 HeartMax = ((v1 > Int32.Parse(s1)) ? v1 : Int32.Parse(s1)) > HeartMax ?
                     ((v1 > Int32.Parse(s1) ? v1 : Int32.Parse(s1))) : HeartMax;
 
-                // v1과 s1 두 숫자를 받고 HeartMax와 두 숫자를 비교하여 더 작은 수를 return
+                // v1과 s1 두 숫자를 받고 HeartMin과 두 숫자를 비교하여 더 작은 수를 return
                 HeartMin = ((v1 < Int32.Parse(s1)) ? v1 : Int32.Parse(s1)) < HeartMin ?
                     ((v1 < Int32.Parse(s1) ? v1 : Int32.Parse(s1))) : HeartMin;
 
@@ -195,7 +195,7 @@ namespace SwitchForms
 
                 if (DateTime.Now.Hour >= 22 || DateTime.Now.Hour < 8) // 22시 이전, 8시 이후 불필요한 cnt값 증가 방지
                 {
-                    cnt++; // 심박 센서값이 0~120사이일 경우 측정 횟수 1씩 증가
+                    cnt++; // 심박 센서값이 35~110사이일 경우 측정 횟수 1씩 증가
                 }
             }
 
@@ -223,7 +223,7 @@ namespace SwitchForms
 
             // HeartData[] 배열에 저장된 값을 cnt(측정횟수)로 나눠 평균값을 정각에 Chart로 나타냄
             // 다음 시간대에서 정확한 평균값을 구하기 위해 cnt 초기화
-            // cnt 초기화를 안해줄 시 이전 시간대의 cnt값에서 cnt++이 시작됨.( 예) 센서값의 개수는 100개인데 cnt값은 100보다 큼 )
+            // cnt 초기화를 안해줄 시 이전 시간대의 cnt값에서 cnt++이 시작됨
             if (DateTime.Now.Hour == 23 && DateTime.Now.Minute == 0 && DateTime.Now.Second == 0)
             {
                 chart1.Series["HeartSensor"].Points.AddXY("22시", HeartData[0] / cnt);
