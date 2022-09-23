@@ -321,25 +321,25 @@ namespace SwitchForms
             // 정각에 배열에 저장된 값을 Chart로 나타냄
             // PIR차트에서 cnt(측정횟수)를 안쓰는 이유는 센서값들이 모인 PIRData리스트 값 자체가 활동량임.
             // 예를 들어 PIRData[0] = 50일 경우 1시간동안 50번 움직였다는 의미이므로 굳이 cnt(측정횟수)로 연산을 하지않음.
-            if (DateTime.Now.Hour == 23 && DateTime.Now.Minute == 0)
+            if (DateTime.Now.Hour == 23 && DateTime.Now.Minute == 0 && DateTime.Now.Second == 0)
                 chart2.Series["활동량"].Points.AddXY("22시", PIRData[0]);
-            else if (DateTime.Now.Hour == 24 && DateTime.Now.Minute == 0)
+            else if (DateTime.Now.Hour == 24 && DateTime.Now.Minute == 0 && DateTime.Now.Second == 0)
                 chart2.Series["활동량"].Points.AddXY("23시", PIRData[1]);
-            else if (DateTime.Now.Hour == 1 && DateTime.Now.Minute == 0)
+            else if (DateTime.Now.Hour == 1 && DateTime.Now.Minute == 0 && DateTime.Now.Second == 0)
                 chart2.Series["활동량"].Points.AddXY("24시", PIRData[2]);
-            else if (DateTime.Now.Hour == 2 && DateTime.Now.Minute == 0)
+            else if (DateTime.Now.Hour == 2 && DateTime.Now.Minute == 0 && DateTime.Now.Second == 0)
                 chart2.Series["활동량"].Points.AddXY("1시", PIRData[3]);
-            else if (DateTime.Now.Hour == 3 && DateTime.Now.Minute == 0)
+            else if (DateTime.Now.Hour == 3 && DateTime.Now.Minute == 0 && DateTime.Now.Second == 0)
                 chart2.Series["활동량"].Points.AddXY("2시", PIRData[4]);
-            else if (DateTime.Now.Hour == 4 && DateTime.Now.Minute == 0)
+            else if (DateTime.Now.Hour == 4 && DateTime.Now.Minute == 0 && DateTime.Now.Second == 0)
                 chart2.Series["활동량"].Points.AddXY("3시", PIRData[5]);
-            else if (DateTime.Now.Hour == 5 && DateTime.Now.Minute == 0)
+            else if (DateTime.Now.Hour == 5 && DateTime.Now.Minute == 0 && DateTime.Now.Second == 0)
                 chart2.Series["활동량"].Points.AddXY("4시", PIRData[6]);
-            else if (DateTime.Now.Hour == 6 && DateTime.Now.Minute == 0)
+            else if (DateTime.Now.Hour == 6 && DateTime.Now.Minute == 0 && DateTime.Now.Second == 0)
                 chart2.Series["활동량"].Points.AddXY("5시", PIRData[7]);
-            else if (DateTime.Now.Hour == 7 && DateTime.Now.Minute == 0)
+            else if (DateTime.Now.Hour == 7 && DateTime.Now.Minute == 0 && DateTime.Now.Second == 0)
                 chart2.Series["활동량"].Points.AddXY("6시", PIRData[8]);
-            else if (DateTime.Now.Hour == 8 && DateTime.Now.Minute == 0)
+            else if (DateTime.Now.Hour == 8 && DateTime.Now.Minute == 0 && DateTime.Now.Second == 0)
                 chart2.Series["활동량"].Points.AddXY("7시", PIRData[9]);
 
             // PIRData[] 배열의 인덱스 중 최대값을 찾음. 
@@ -348,12 +348,9 @@ namespace SwitchForms
             // PIRData[] 배열의 인덱스 중 0이 아닌 최소값을 찾음.
             for (int i = 0; i < PIRData.Length; i++)
             {
-                if (PIRData[i] == 0)
-                    return;
+                if (PIRData[i] == 0) { }
                 else if (PIRData[i] < PIRMin)
                     PIRMin = PIRData[i];
-                else
-                    return;
             }
 
         }
