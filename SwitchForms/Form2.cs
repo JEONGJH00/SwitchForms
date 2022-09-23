@@ -342,17 +342,6 @@ namespace SwitchForms
             else if (DateTime.Now.Hour == 8 && DateTime.Now.Minute == 0 && DateTime.Now.Second == 0)
                 chart2.Series["활동량"].Points.AddXY("7시", PIRData[9]);
 
-            // PIRData[] 배열의 인덱스 중 최대값을 찾음. 
-            PIRMax = PIRData.Max();
-
-            // PIRData[] 배열의 인덱스 중 0이 아닌 최소값을 찾음.
-            for (int i = 0; i < PIRData.Length; i++)
-            {
-                if (PIRData[i] == 0) { }
-                else if (PIRData[i] < PIRMin)
-                    PIRMin = PIRData[i];
-            }
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -392,6 +381,19 @@ namespace SwitchForms
         {
             label7.Text = string.Format("심박수 최대값 : " + HeartMax);
             label8.Text = string.Format("심박수 최소값 : " + HeartMin);
+
+
+            // PIRData[] 배열의 인덱스 중 최대값을 찾음. 
+            PIRMax = PIRData.Max();
+
+            // PIRData[] 배열의 인덱스 중 0이 아닌 최소값을 찾음.
+            for (int i = 0; i < PIRData.Length; i++)
+            {
+                if (PIRData[i] == 0) { }
+                else if (PIRData[i] < PIRMin)
+                    PIRMin = PIRData[i];
+            }
+
             label9.Text = string.Format("움직임 최대값 : " + PIRMax);
             label10.Text = string.Format("움직임 최소값 : " + PIRMin);
         }
