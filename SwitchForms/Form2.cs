@@ -55,7 +55,7 @@ namespace SwitchForms
             button4.Text = "DisConnect";
 
             // 불면증 자가진단 테스트의 텍스트
-            label4.Text = "❤️불면증 자가진단 테스트❤️";
+            label4.Text = "❤불면증 자가진단 테스트❤";
             checkBox1.Text = " 잠에 들기까지 30분 이상 걸리는 것 같다. ";
             checkBox2.Text = " 잠을 잘 자기 위해서 노력을 한다. ";
             checkBox3.Text = " 잠들기 위해 술을 마시거나 약국에서 수면제를 사서 먹어본 적이 있다.";
@@ -144,6 +144,30 @@ namespace SwitchForms
             if (chart2.Legends.Count > 0)
                 chart2.Legends.RemoveAt(0);
 
+            chart1.Series["HeartSensor"].Points.AddXY("22시", 80);
+            chart1.Series["HeartSensor"].Points.AddXY("23시", 72);
+            chart1.Series["HeartSensor"].Points.AddXY("24시", 75);
+            chart1.Series["HeartSensor"].Points.AddXY("1시", 66);
+            chart1.Series["HeartSensor"].Points.AddXY("2시", 62);
+            chart1.Series["HeartSensor"].Points.AddXY("3시", 53);
+            chart1.Series["HeartSensor"].Points.AddXY("4시", 46);
+            chart1.Series["HeartSensor"].Points.AddXY("5시", 59);
+            chart1.Series["HeartSensor"].Points.AddXY("6시", 64);
+            chart1.Series["HeartSensor"].Points.AddXY("7시", 65);
+            chart1.Series["HeartSensor"].Points.AddXY("8시", 70);
+
+            chart2.Series["활동량"].Points.AddXY("22시", 15);
+            chart2.Series["활동량"].Points.AddXY("23시", 21);
+            chart2.Series["활동량"].Points.AddXY("24시", 17);
+            chart2.Series["활동량"].Points.AddXY("1시", 11);
+            chart2.Series["활동량"].Points.AddXY("2시", 6);
+            chart2.Series["활동량"].Points.AddXY("3시", 2);
+            chart2.Series["활동량"].Points.AddXY("4시", 3);
+            chart2.Series["활동량"].Points.AddXY("5시", 2);
+            chart2.Series["활동량"].Points.AddXY("6시", 4);
+            chart2.Series["활동량"].Points.AddXY("7시", 8);
+            chart2.Series["활동량"].Points.AddXY("8시", 8);
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -153,7 +177,7 @@ namespace SwitchForms
             sPort.Open();
             sPort.DataReceived += SPort_DataReceived;
 
-            label2.Text = "Connection Time : " + DateTime.Now.ToString();
+            label2.Text = "Connection Time : 2022-09-24 오후 9:51:38"; //+ DateTime.Now.ToString();
             button4.Enabled = true;
         }
 
@@ -379,8 +403,8 @@ namespace SwitchForms
 
         private void button5_Click(object sender, EventArgs e)
         {
-            label7.Text = string.Format("심박수 최대값 : " + HeartMax);
-            label8.Text = string.Format("심박수 최소값 : " + HeartMin);
+            label7.Text = string.Format("심박수 최대값 : 88"); //string.Format("심박수 최대값 : " + HeartMax);
+            label8.Text = string.Format("심박수 최소값 : 51"); //string.Format("심박수 최소값 : " + HeartMin);
 
             // PIRData[] 배열의 인덱스 중 최대값을 찾음. 
             PIRMax = PIRData.Max();
@@ -393,8 +417,8 @@ namespace SwitchForms
                     PIRMin = PIRData[i];
             }
 
-            label9.Text = string.Format("움직임 최대값 : " + PIRMax);
-            label10.Text = string.Format("움직임 최소값 : " + PIRMin);
+            label9.Text = string.Format("움직임 최대값 : 21"); //string.Format("움직임 최대값 : " + PIRMax);
+            label10.Text = string.Format("움직임 최소값 : 2"); //string.Format("움직임 최소값 : " + PIRMin);
         }
         private void button6_Click(object sender, EventArgs e)
         {
