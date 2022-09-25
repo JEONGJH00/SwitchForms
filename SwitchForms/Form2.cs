@@ -84,18 +84,18 @@ namespace SwitchForms
             chart1.ChartAreas.Clear();
             chart1.ChartAreas.Add("draw");
             chart1.ChartAreas["draw"].AxisX.Minimum = 0;
-            chart1.ChartAreas["draw"].AxisX.Maximum = 17;
+            chart1.ChartAreas["draw"].AxisX.Maximum = 12;
             chart1.ChartAreas["draw"].AxisX.Interval = 1;
-            chart1.ChartAreas["draw"].AxisX.MajorGrid.LineColor = Color.White;
+            chart1.ChartAreas["draw"].AxisX.MajorGrid.LineColor = Color.Gray;
             chart1.ChartAreas["draw"].AxisX.MajorGrid.LineDashStyle = ChartDashStyle.Dash;
 
             chart1.ChartAreas["draw"].AxisY.Minimum = 0;
-            chart1.ChartAreas["draw"].AxisY.Maximum = 120;
+            chart1.ChartAreas["draw"].AxisY.Maximum = 110;
             chart1.ChartAreas["draw"].AxisY.Interval = 10;
-            chart1.ChartAreas["draw"].AxisY.MajorGrid.LineColor = Color.White;
+            chart1.ChartAreas["draw"].AxisY.MajorGrid.LineColor = Color.Gray;
             chart1.ChartAreas["draw"].AxisY.MajorGrid.LineDashStyle = ChartDashStyle.Dash;
 
-            chart1.ChartAreas["draw"].BackColor = Color.White;
+            chart1.ChartAreas["draw"].BackColor = Color.Ivory;
 
             chart1.ChartAreas["draw"].CursorX.AutoScroll = true;
 
@@ -106,8 +106,8 @@ namespace SwitchForms
             chart1.Series.Clear();
             chart1.Series.Add("HeartSensor");
             chart1.Series["HeartSensor"].ChartType = SeriesChartType.Line;
-            chart1.Series["HeartSensor"].Color = Color.Black;
-            chart1.Series["HeartSensor"].BorderWidth = 10;
+            chart1.Series["HeartSensor"].Color = Color.DarkSalmon;
+            chart1.Series["HeartSensor"].BorderWidth = 7;
             if (chart1.Legends.Count > 0)
                 chart1.Legends.RemoveAt(0);
 
@@ -115,18 +115,18 @@ namespace SwitchForms
             chart2.ChartAreas.Clear();
             chart2.ChartAreas.Add("draw2");
             chart2.ChartAreas["draw2"].AxisX.Minimum = 0;
-            chart2.ChartAreas["draw2"].AxisX.Maximum = 17;
+            chart2.ChartAreas["draw2"].AxisX.Maximum = 12;
             chart2.ChartAreas["draw2"].AxisX.Interval = 1;
-            chart2.ChartAreas["draw2"].AxisX.MajorGrid.LineColor = Color.White;
+            chart2.ChartAreas["draw2"].AxisX.MajorGrid.LineColor = Color.Gray;
             chart2.ChartAreas["draw2"].AxisX.MajorGrid.LineDashStyle = ChartDashStyle.Dash;
 
             chart2.ChartAreas["draw2"].AxisY.Minimum = 0;
             chart2.ChartAreas["draw2"].AxisY.Maximum = 50;
             chart2.ChartAreas["draw2"].AxisY.Interval = 10;
-            chart2.ChartAreas["draw2"].AxisY.MajorGrid.LineColor = Color.White;
+            chart2.ChartAreas["draw2"].AxisY.MajorGrid.LineColor = Color.Gray;
             chart2.ChartAreas["draw2"].AxisY.MajorGrid.LineDashStyle = ChartDashStyle.Dash;
 
-            chart2.ChartAreas["draw2"].BackColor = Color.White;
+            chart2.ChartAreas["draw2"].BackColor = Color.Ivory;
 
             chart2.ChartAreas["draw2"].CursorX.AutoScroll = true;
 
@@ -137,10 +137,11 @@ namespace SwitchForms
             chart2.Series.Clear();
             chart2.Series.Add("활동량");
             chart2.Series["활동량"].ChartType = SeriesChartType.Column;
-            chart2.Series["활동량"].Color = Color.Black;
-            chart2.Series["활동량"].BorderWidth = 10;
+            chart2.Series["활동량"].Color = Color.DarkSalmon;
+            chart2.Series["활동량"].BorderWidth = 7;
             if (chart2.Legends.Count > 0)
                 chart2.Legends.RemoveAt(0);
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -281,7 +282,6 @@ namespace SwitchForms
         // PIR 센서 ShowValue
         private void ShowValue2(string s2)
         {
-
             int v2 = Int32.Parse(s2); // PIR값을 INT값으로 변환해서 v2에 넣음
             try // 오류 점검 코드
             {
@@ -341,7 +341,6 @@ namespace SwitchForms
                 chart2.Series["활동량"].Points.AddXY("6시", PIRData[8]);
             else if (DateTime.Now.Hour == 8 && DateTime.Now.Minute == 0 && DateTime.Now.Second == 0)
                 chart2.Series["활동량"].Points.AddXY("7시", PIRData[9]);
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -366,7 +365,6 @@ namespace SwitchForms
 
             button3.Enabled = false;
             button4.Enabled = true;
-
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -381,7 +379,6 @@ namespace SwitchForms
         {
             label7.Text = string.Format("심박수 최대값 : " + HeartMax);
             label8.Text = string.Format("심박수 최소값 : " + HeartMin);
-
 
             // PIRData[] 배열의 인덱스 중 최대값을 찾음. 
             PIRMax = PIRData.Max();
