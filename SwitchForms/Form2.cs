@@ -70,7 +70,7 @@ namespace SwitchForms
             button5.Text = "확인";
             button6.Text = "수면장애 자가검진";
             label5.Text = "오늘 당신의 수면은?";
-            label6.Text = "심박수 45이하, 움직임 5이하 = RAM수면으로 판단" + "\n" + "심박수 65이상, 움직임 10이상 = 비RAM수면으로 판단"
+            label6.Text = "심박수 50이하, 움직임 5이하 = RAM수면으로 판단" + "\n" + "심박수 65이상, 움직임 10이상 = 비RAM수면으로 판단"
                 + "\n" + "* 심박수가 35이하로 떨어졌을 시 병원정밀검사 필요!";
             label7.Text = "심박수 최대값 : ";
             label8.Text = "심박수 최소값 : ";
