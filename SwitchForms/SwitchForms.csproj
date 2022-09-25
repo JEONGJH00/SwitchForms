@@ -116,6 +116,36 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaoTalk_20220925_154324666.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaoTalk_20220925_154346290.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaoTalk_20220925_154338747.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaoTalk_20220925_154333548.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaoTalk_20220925_162005712.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaoTalk_20220925_1543462901.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaoTalk_20220925_1620057121.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaoTalk_20220925_154328427.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\KakaoTalk_20220925_154326290.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

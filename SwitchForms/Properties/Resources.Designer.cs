@@ -59,5 +59,105 @@ namespace SwitchForms.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1 {
+            get {
+                object obj = ResourceManager.GetObject("1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap KakaoTalk_20220925_154324666 {
+            get {
+                object obj = ResourceManager.GetObject("KakaoTalk_20220925_154324666", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap KakaoTalk_20220925_154326290 {
+            get {
+                object obj = ResourceManager.GetObject("KakaoTalk_20220925_154326290", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap KakaoTalk_20220925_154328427 {
+            get {
+                object obj = ResourceManager.GetObject("KakaoTalk_20220925_154328427", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap KakaoTalk_20220925_154333548 {
+            get {
+                object obj = ResourceManager.GetObject("KakaoTalk_20220925_154333548", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap KakaoTalk_20220925_154338747 {
+            get {
+                object obj = ResourceManager.GetObject("KakaoTalk_20220925_154338747", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap KakaoTalk_20220925_154346290 {
+            get {
+                object obj = ResourceManager.GetObject("KakaoTalk_20220925_154346290", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap KakaoTalk_20220925_1543462901 {
+            get {
+                object obj = ResourceManager.GetObject("KakaoTalk_20220925_1543462901", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap KakaoTalk_20220925_162005712 {
+            get {
+                object obj = ResourceManager.GetObject("KakaoTalk_20220925_162005712", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   System.Drawing.Bitmap 형식의 지역화된 리소스를 찾습니다.
+        /// </summary>
+        internal static System.Drawing.Bitmap KakaoTalk_20220925_1620057121 {
+            get {
+                object obj = ResourceManager.GetObject("KakaoTalk_20220925_1620057121", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

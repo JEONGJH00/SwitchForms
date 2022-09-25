@@ -51,9 +51,11 @@ namespace SwitchForms
             label1.Text = "당신의 더 좋은 수면";
             label2.Text = "Connection Time : ";
             label3.Text = "포트를 선택해주세요";
+            button3.Text = "Connect";
+            button4.Text = "DisConnect";
 
             // 불면증 자가진단 테스트의 텍스트
-            label4.Text = "불면증 자가진단 테스트";
+            label4.Text = "❤️불면증 자가진단 테스트❤️";
             checkBox1.Text = " 잠에 들기까지 30분 이상 걸리는 것 같다. ";
             checkBox2.Text = " 잠을 잘 자기 위해서 노력을 한다. ";
             checkBox3.Text = " 잠들기 위해 술을 마시거나 약국에서 수면제를 사서 먹어본 적이 있다.";
